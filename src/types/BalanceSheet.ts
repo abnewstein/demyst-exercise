@@ -29,4 +29,5 @@ type Report = {
 export type BalanceSheet = {
   Status: string;
   Reports: Array<Report>;
+  Message?: string;
 };
