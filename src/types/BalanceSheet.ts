@@ -1,4 +1,4 @@
-type Cell = {
+export type Cell = {
   Value: string;
   Attributes?: Array<{
     Value: string;
@@ -6,16 +6,16 @@ type Cell = {
   }>;
 };
 
-type RowType = "Header" | "Section" | "Row" | "SummaryRow";
+export type RowType = "Header" | "Section" | "Row" | "SummaryRow";
 
-type Row = {
+export type Row = {
   RowType: RowType;
   Title?: string;
   Rows?: Array<Row>;
   Cells?: Array<Cell>;
 };
 
-type Report = {
+export type Report = {
   ReportID: string;
   ReportName: string;
   ReportType: string;

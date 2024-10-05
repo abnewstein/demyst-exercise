@@ -5,6 +5,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  margin: 0 auto;
+  width: fit-content;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,10 +28,14 @@ body {
   }
 }
 
+h1 {
+  font-size: 2rem;
+}
+
 table {
   text-align: left;
   width: 100vw;
-  max-width: 1080px;
+  max-width: 800px;
   margin: 10px auto;
   padding: 10px;
   border: 2px solid #d0d0d5;

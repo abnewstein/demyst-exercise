@@ -1,6 +1,6 @@
 "use client";
 
-import BalanceSheetComponent from "@/components/BalanceSheet";
+import { BalanceSheet } from "@/components/BalanceSheet/";
 import Loading from "@/components/Loading";
 import fetcher from "@/utils/fetcher";
 import useSWR from "swr";
@@ -15,5 +15,5 @@ export default function BalanceSheetPage() {
   if (isLoading) return <Loading />;
   if (error) return <>There was an error in fetching the data</>;
 
-  return <BalanceSheetComponent sheetData={sheetData} />;
+  return <BalanceSheet sheetData={sheetData} />;
 }
