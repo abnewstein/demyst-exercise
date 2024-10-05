@@ -9,13 +9,6 @@
   width: fit-content;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   color: var(--foreground);
   background: var(--background);
@@ -26,17 +19,4 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-}
-
-h1 {
-  font-size: 2rem;
-}
-
-table {
-  text-align: left;
-  width: 100vw;
-  max-width: 800px;
-  margin: 10px auto;
-  padding: 10px;
-  border: 2px solid #d0d0d5;
 }

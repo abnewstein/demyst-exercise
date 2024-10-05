@@ -6,15 +6,21 @@ type CellsProps = {
 };
 
 export default function Cells({ cells, rowType }: CellsProps) {
-  const CellTag: React.FC<{ children: React.ReactNode }> = ({ children }) =>
-    rowType === "Header" ? <th>{children}</th> : <td>{children}</td>;
-  return cells.map(({ Value }, i) =>
-    rowType === "SummaryRow" ? (
-      <CellTag key={`${Value}-${i}`}>
-        <b>{Value}</b>
-      </CellTag>
+  const CellTag: React.FC<{
+    children: React.ReactNode;
+    className?: string;
+  }> = ({ children, className }) =>
+    rowType === "Header" ? (
+      <th className={`${className} px-6 py-4`}>{children}</th>
     ) : (
-      <CellTag key={`${Value}-${i}`}>{Value}</CellTag>
-    )
-  );
+      <td className={`${className} px-4 py-2`}>{children}</td>
+    );
+  return cells.map(({ Value }, i) => (
+    <CellTag
+      key={`${Value}-${i}`}
+      className={rowType === "SummaryRow" ? "font-bold" : ""}
+    >
+      {Value}
+    </CellTag>
+  ));
 }

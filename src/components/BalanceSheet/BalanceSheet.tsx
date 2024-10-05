@@ -12,7 +12,9 @@ export default function BalanceSheet({ sheetData }: BalanceSheetProps) {
         return (
           <Fragment key={`report-${i}`}>
             {report.ReportTitles.map((title) => (
-              <h1 key={title}>{title}</h1>
+              <h1 key={title} className="text-3xl mb-4">
+                {title}
+              </h1>
             ))}
             <ReportTable report={report} />
           </Fragment>
