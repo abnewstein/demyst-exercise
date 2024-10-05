@@ -1,24 +1,19 @@
 "use client";
 
 import BalanceSheetComponent from "@/components/BalanceSheet";
-import type { BalanceSheet } from "@/types/BalanceSheet";
-import { useEffect, useState } from "react";
+import Loading from "@/components/Loading";
+import fetcher from "@/utils/fetcher";
+import useSWR from "swr";
 
 export default function BalanceSheetPage() {
-  const [sheetData, setSheetData] = useState<BalanceSheet>();
-  const [isLoading, setIsLoading] = useState(true);
+  const {
+    data: sheetData,
+    isLoading,
+    error,
+  } = useSWR("/api/balance-sheet", fetcher);
 
-  useEffect(() => {
-    fetch("/api/balance-sheet")
-      .then((res) => res.json())
-      .then((data) => {
-        setSheetData(data);
-        setIsLoading(false);
-      });
-  }, []);
-
-  if (isLoading) return <>Loading...</>;
-  if (!sheetData) return <>There was an error in fetching the data</>;
+  if (isLoading) return <Loading />;
+  if (error) return <>There was an error in fetching the data</>;
 
   return <BalanceSheetComponent sheetData={sheetData} />;
 }

@@ -25,3 +25,12 @@ body {
     text-wrap: balance;
   }
 }
+
+table {
+  text-align: left;
+  width: 100vw;
+  max-width: 1080px;
+  margin: 10px auto;
+  padding: 10px;
+  border: 2px solid #d0d0d5;
+}
