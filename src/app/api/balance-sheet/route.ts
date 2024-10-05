@@ -1,14 +1,12 @@
 import { fetchBalanceSheet } from "@/services/fetchBalanceSheet";
-import { BalanceSheet } from "@/types/BalanceSheet";
 import { NextResponse } from "next/server";
 
 export async function GET() {
-  const data: BalanceSheet = await fetchBalanceSheet();
-  if (data.Status !== "OK") {
-    return NextResponse.json({
-      Message: "Error fetching the balance sheet.",
-      ...data,
-    });
+  const { data, error, status } = await fetchBalanceSheet();
+
+  if (error) {
+    return NextResponse.json({ Error: error }, { status });
   }
-  return NextResponse.json(data);
+
+  return NextResponse.json(data, { status: 200 });
 }

@@ -21,7 +21,7 @@ export type Report = {
   ReportType: string;
   ReportTitles: Array<string>;
   ReportDate: string;
-  UpdatedDateUTC: Date;
+  UpdatedDateUTC: string;
   Fields: Array<string>;
   Rows: Array<Row>;
 };
@@ -29,5 +29,4 @@ export type Report = {
 export type BalanceSheet = {
   Status: string;
   Reports: Array<Report>;
-  Message?: string;
 };

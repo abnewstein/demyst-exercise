@@ -13,7 +13,7 @@ export default function BalanceSheetPage() {
   } = useSWR("/api/balance-sheet", fetcher);
 
   if (isLoading) return <Loading />;
-  if (error) return <>There was an error in fetching the data</>;
+  if (error) return <>{error}</>;
 
   return <BalanceSheet sheetData={sheetData} />;
 }

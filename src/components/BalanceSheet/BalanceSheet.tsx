@@ -1,6 +1,7 @@
 import type { BalanceSheet } from "@/types/BalanceSheet";
 import ReportTable from "./ReportTable";
 import { Fragment } from "react";
+
 type BalanceSheetProps = {
   sheetData: BalanceSheet;
 };
