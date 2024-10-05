@@ -10,10 +10,10 @@ export default function BalanceSheetPage() {
     data: sheetData,
     isLoading,
     error,
-  } = useSWR("/api/balance-sheet", fetcher);
+  } = useSWR(`${process.env.URL || ""}/api/balance-sheet`, fetcher);
 
   if (isLoading) return <Loading />;
-  if (error) return <>{error}</>;
+  if (error) return <>{error.message.Error}</>;
 
   return <BalanceSheet sheetData={sheetData} />;
 }
