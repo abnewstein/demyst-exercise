@@ -43,6 +43,13 @@ docker-compose up
 
 - Wait for the both services to be up and then open [http://localhost:5000](http://localhost:5000) with your browser to see the result.
 
+## Previews
+
+![demyst-exercise-1](https://github.com/user-attachments/assets/77f13e04-3a33-44c8-ac35-363569c4953d)
+![demyst-exercise-2](https://github.com/user-attachments/assets/d26197f4-f951-4dc5-8711-ea1945f67f63)
+![demyst-exercise-3](https://github.com/user-attachments/assets/332b136c-ab26-4ed7-8f13-a07c5e49edb8)
+![demyst-exercise-4](https://github.com/user-attachments/assets/60660893-25bb-4700-ad85-b34b484f8dbe)
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
