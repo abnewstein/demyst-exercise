@@ -13,7 +13,7 @@ export default function BalanceSheetPage() {
   } = useSWR(`${process.env.URL || ""}/api/balance-sheet`, fetcher);
 
   if (isLoading) return <Loading />;
-  if (error) return <>{error.message.Error}</>;
+  if (error) return <>{`${error.message.Status} - ${error.message.Error}`}</>;
 
   return <BalanceSheet sheetData={sheetData} />;
 }

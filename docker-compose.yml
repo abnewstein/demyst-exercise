@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  xero-service:
+    image: jaypeng2015/show-me-the-money:latest
+    ports:
+      - "3000:3000"
+  demyst-exercise:
+    # image: abnewstein/demyst-exercise:latest
+    build:
+      context: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - "./src:/app/src"
