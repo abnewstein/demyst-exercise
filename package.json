@@ -1,5 +1,8 @@
 {
   "name": "demyst-exercise",
+  "author": {
+    "name": "Abdul Rahman Lathif"
+  },
   "version": "0.1.0",
   "private": true,
   "type": "module",

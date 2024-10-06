@@ -33,9 +33,15 @@ bun dev
 
 ### Using Docker image
 
-- Clone the repo from this url `https://github.com/abnewstein/demyst-exercise.git`.
-- Run `docker-compose up`
-- Open [http://localhost:5000](http://localhost:5000) with your browser to see the result.
+- Clone the repo and run docker-compose
+
+```bash
+git clone https://github.com/abnewstein/demyst-exercise.git`.
+cd demyst-exercise
+docker-compose up
+```
+
+- Wait for the both services to be up and then open [http://localhost:5000](http://localhost:5000) with your browser to see the result.
 
 ## Learn More
 
