@@ -36,7 +36,7 @@ bun dev
 - Clone the repo and run docker-compose
 
 ```bash
-git clone https://github.com/abnewstein/demyst-exercise.git`.
+git clone https://github.com/abnewstein/demyst-exercise.git
 cd demyst-exercise
 docker-compose up
 ```
