@@ -19,13 +19,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 - Then run the development server:
 
 ```bash
+npm i
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 - Open [http://localhost:5000](http://localhost:5000) with your browser to see the result.
@@ -42,6 +37,13 @@ docker-compose up
 ```
 
 - Wait for the both services to be up and then open [http://localhost:5000](http://localhost:5000) with your browser to see the result.
+
+### To run the unit tests
+
+```bash
+npm i
+npm run test
+```
 
 ## Previews
 
